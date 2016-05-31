@@ -63,5 +63,6 @@ SPA - Single Page Application - 单页面应用
 
 ## 快速开始
 
-1. 下载源码
-2.  在 `res/js/app` 中
+1. 下载源码，放到 `Apache` 等容器中，运行查看框架示例
+2.  在 `res/js/app` 中新建业务模块js，在需要的地方 `require`
+3.  在 `tmpl/app` 中新建业务模块html模板，在需要初始化的时候，使用Js模板引入渲染
