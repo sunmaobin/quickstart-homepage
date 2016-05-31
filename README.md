@@ -8,7 +8,7 @@
 
 SPA - Single Page Application - 单页面应用
 
-查看示例：http://www.night123.com/sqsf-homepage-d1
+查看示例：http://www.night123.com/quickstart-homepage-d1
 
 ## 开发原则
 
