@@ -1,0 +1,115 @@
+<div class="index">
+    <div id="banner" class="banner"></div>
+    <div id="service" class="service">
+        <div class="gd-container">
+            <h1>
+                <span>我们的</span><span class="color-orange">服务</span>
+            </h1>
+            <p>
+                奈特软件积累了大量移动应用APP开发经验，涉及的平台包括：iOS、Android、H5和Web页面等
+            </p>
+            <div class="section gd-row">
+                <div class="gd-col-3">
+                    <div class="platform ios"></div>
+                    <div class="label">
+                        iOS开发
+                    </div>
+                </div>
+                <div class="gd-col-3">
+                    <div class="platform android"></div>
+                    <div class="label">
+                        Android开发
+                    </div>
+                </div>
+                <div class="gd-col-3">
+                    <div class="platform web"></div>
+                    <div class="label">
+                        Web开发
+                    </div>
+                </div>
+                <div class="gd-col-3">
+                    <div class="platform h5"></div>
+                    <div class="label">
+                        H5开发
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="case" class="case">
+        <div class="gd-container">
+            <h1>
+                <span>我们的</span><span class="color-orange">案例</span>
+            </h1>
+            <p>
+                成功案例广泛覆盖互联网招聘、020、视频直播互动、智能设备等行业
+            </p>
+            <div class="section">
+                <div class="gd-row">
+                    <%
+                    for(var i = 0, si = cases.length; i < si; i++){
+                    %>
+
+                    <div class="gd-col-4">
+                        <div class="item" title="查看详情">
+                            <img src="res/data/case/thumbnail/slide-case-<%= i+1 %>.png">
+                        </div>
+                    </div>
+
+                    <%
+                    }
+                    %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="about">
+        <div class="gd-container">
+            <h1>
+                <span>关于</span><span class="color-orange">我们</span>
+            </h1>
+            <p>
+                奈特软件专注于移动互联网软件外包开发业务
+            </p>
+        </div>
+        <div class="section"></div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="gd-container">
+            <h1>
+                <span>联系</span><span class="color-orange">我们</span>
+            </h1>
+            <p>
+                携手同行，我们会是您前行路上的好伙伴
+            </p>
+            <div class="section gd-clearfix">
+                <div class="gd-left">
+                    <div class="map"></div>
+                </div>
+                <div class="gd-left">
+                    <div class="info">
+                        <p>
+                            地址：深圳市南山区科技园深圳软件园一起2栋911室
+                        </p>
+                        <p>
+                            电话：0755-88888888
+                        </p>
+                        <p>
+                            手机：18888888888
+                        </p>
+                        <p>
+                            邮箱：ismb@qq.com
+                        </p>
+                        <p>
+                            联系人：孙生
+                        </p>
+                        <div class="qrcode">
+                            <img src="res/img/qrcode.png" alt="扫描二维码" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

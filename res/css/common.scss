@@ -1,0 +1,134 @@
+@import "../../lib/sassCore/base";
+
+/*
+全局防止越界
+================================*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*-webkit-user-select: none;*/
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*
+H5全局
+================================*/
+@mixin transition(){
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+/*
+通用全局
+================================*/
+html,body{
+    color: $black;
+}
+
+a{
+    cursor: pointer;
+    color: $white;
+    @include transition();
+
+    &.active{
+        color: $orange;
+    }
+
+    &:hover{
+        color: $orange;
+    }
+
+    &:active{
+        color: $orangeDarker;
+    }
+}
+
+/*
+颜色
+================================*/
+.color-orange {
+    color: $orange;
+}
+
+/*
+清除浮动
+================================*/
+.gd-clearfix{
+    @include clearfix();
+}
+
+.gd-left{
+    @include float();
+}
+
+.gd-right{
+    @include float(right);
+}
+
+/*
+UL横向显示
+================================*/
+.gd-list-inline{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.gd-list-inline > li {
+    @include inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    &:last-child{
+        padding-right: 0;
+    }
+}
+
+/*
+多栏布局
+================================*/
+.gd-row{
+    width: 100%;
+    @include clearfix();
+}
+
+.gd-col-3,
+.gd-col-4,
+.gd-col-6{
+    @include float();
+}
+
+.gd-col-3{
+    width: 25%;
+}
+
+.gd-col-4{
+    width: 33.33%;
+}
+
+.gd-col-6{
+    width: 50%;
+}
+
+/*
+业务全局
+================================*/
+$window-min-w : 1080px;
+.gd-container{
+    width: $window-min-w;
+    margin: 0 auto;
+}
+
+.gd-hide{
+    display: none;
+}

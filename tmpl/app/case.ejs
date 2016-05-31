@@ -1,0 +1,93 @@
+<div class="dialog animated zoomIn">
+    <!-- 顶部Header -->
+    <header>
+        <div class="gd-container">
+            <div class="gd-clearfix">
+                <div id="backHome" title="返回主页" class="back-home gd-left"></div>
+                <div title="前一个" class="case-prev gd-left slidesjs-control slidesjs-previous"></div>
+                <div title="后一个" class="case-next gd-left slidesjs-control slidesjs-next"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 案例Banner -->
+    <section class="banner">
+        <%
+        for(var i = 0, si = cases.length; i < si; i++){
+        %>
+        <div class="slider" style="background-image: url('res/data/case/detail/<%= i + 1%>/bg-banner-<%= i + 1%>.png')"></div>
+        <%
+        }
+        %>
+    </section>
+
+    <!-- 案例正文描述 -->
+    <section class="desc-box">
+        <%
+            for(var i = 0, si = cases.length; i < si; i++){
+            var obj = cases[i];
+        %>
+
+        <div class="slider-content-<%= i + 1 %> gd-hide">
+            <div class="gd-container">
+                <div class="desc gd-clearfix">
+                    <div class="desc-core gd-left">
+                        <h1>
+                            <%= obj.core.h %>
+                        </h1>
+                        <p>
+                            <%= obj.core.p %>
+                        </p>
+                    </div>
+                    <div class="desc-info gd-left">
+                        <h2>
+                            项目描述
+                        </h2>
+                        <p>
+                            <%= obj.info.p1 %>
+                        </p>
+                        <p>
+                            <%= obj.info.p2 %>
+                        </p>
+                        <p>
+                            <%= obj.info.p3 %>
+                        </p>
+                    </div>
+                </div>
+
+                <%
+                    for(var j = 0, sj = obj.media.size; j < sj; j++){
+                %>
+
+                    <div class="content">
+                        <div class="media">
+                            <img src="res/data/case/detail/<%= i+1 %>/data-<%= i+1 %>-<%= j+1 %>.png">
+                        </div>
+                    </div>
+
+                    <%
+                        if(j != sj - 1){
+                    %>
+
+                    <div class="split"></div>
+
+                    <%
+                        }
+                    %>
+
+                <%
+                    }
+                %>
+
+            </div>
+        </div>
+
+        <%
+            }
+        %>
+
+    </section>
+
+    <!-- 底部 footer部分 -->
+    <footer></footer>
+</div>
